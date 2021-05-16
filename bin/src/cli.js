@@ -8,3 +8,4 @@ export const greeting = () => console.log(`Hello, ${name}!`);
 export const noIsWrongAnswer = () => console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${name}!`);
 export const yesIsWrongAnswer = () => console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`);
 export const congrats = () => console.log(`Congratulations, ${name}!`);
+export const letsTryAgain = () => console.log(`Let's try again, ${name}!`);
