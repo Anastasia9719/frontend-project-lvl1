@@ -4,4 +4,5 @@
 ![Actions Status](https://github.com/Anastasia9719/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)
 [Brain-even dem](https://asciinema.org/a/jRDU0TKjgxrqbxWARpULiU0Gz)
 [Brain-calc dem](https://asciinema.org/a/GOCX0wd2Tm3RKYJH3qglb6Zlc)
-[Brain-gcd dem] (https://asciinema.org/a/uYv4fc5s0MbgaSMNf4ZowrrYs)
+[Brain-gcd dem](https://asciinema.org/a/uYv4fc5s0MbgaSMNf4ZowrrYs)
+[Brain-progression](https://asciinema.org/a/rxEfiY88e3a3pFrUNesgyVw8f)
