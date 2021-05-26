@@ -6,3 +6,4 @@
 [Brain-calc dem](https://asciinema.org/a/GOCX0wd2Tm3RKYJH3qglb6Zlc)
 [Brain-gcd dem](https://asciinema.org/a/uYv4fc5s0MbgaSMNf4ZowrrYs)
 [Brain-progression](https://asciinema.org/a/rxEfiY88e3a3pFrUNesgyVw8f)
+[Brain-prime](https://asciinema.org/a/WFmjn9iGMdMXaMPeQbe9y9uj1)
