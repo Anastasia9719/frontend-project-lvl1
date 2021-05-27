@@ -23,7 +23,7 @@ do {
 
   const askProgression = arifmProgression.join(' ');
 
-  console.log(`Question ${askProgression}`);
+  console.log(`Question: ${askProgression}`);
 
   const answer = askForAnswer();
 

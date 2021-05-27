@@ -20,7 +20,7 @@ const numberOfRightTries = 3;
 do {
   const number = randomNumber();
 
-  console.log(`Question ${number}`);
+  console.log(`Question: ${number}`);
 
   const answer = askForAnswer();
 
