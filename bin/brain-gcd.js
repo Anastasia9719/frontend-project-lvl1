@@ -24,7 +24,7 @@ do {
 
   const askNumber2 = randomNumber();
 
-  console.log(`Question ${askNumber1} ${askNumber2}`);
+  console.log(`Question: ${askNumber1} ${askNumber2}`);
 
   const answer = askForAnswer();
 
