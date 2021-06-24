@@ -4,7 +4,7 @@
 [![Actions Status](https://github.com/Anastasia9719/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)](https://github.com/Anastasia9719/frontend-project-lvl1/actions)
 
 ### How to install games:
-Для установки введите в консоли команду npm install.
+Для установки введите в консоли команду make install
 
 ### Assciiinems:
 
