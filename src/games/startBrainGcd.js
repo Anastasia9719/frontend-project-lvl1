@@ -21,8 +21,8 @@ const gameOptions = () => {
   return [question, rightAnswer];
 };
 
-const startBrainGcd = () => {
+const startGame = () => {
   gameEngine(gameOptions, gameRules);
 };
 
-export default startBrainGcd;
+export default startGame;

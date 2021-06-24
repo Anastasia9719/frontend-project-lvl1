@@ -49,8 +49,8 @@ const gameOptions = () => {
   return [question, rightAnswer];
 };
 
-const startBrainProgression = () => {
+const startGame = () => {
   gameEngine(gameOptions, gameRules);
 };
 
-export default startBrainProgression;
+export default startGame;
