@@ -1,9 +1,13 @@
-import {
-  askName, greeting, congrats, letsTryAgain, askForAnswer,
-} from './cli.js';
+import readlineSync from 'readline-sync';
 
 const gameEngine = (gameStart, gameRules) => {
   console.log('Welcome to the Brain Games!');
+
+  let name;
+
+  const askName = () => { name = readlineSync.question('May I have your name?'); };
+
+  const greeting = () => console.log(`Hello, ${name}!`);
 
   askName();
 
@@ -22,20 +26,21 @@ const gameEngine = (gameStart, gameRules) => {
 
     console.log(`Question: ${question}`);
 
+    const askForAnswer = () => readlineSync.question('Your answer: ');
+
     const answer = askForAnswer();
 
     if (answer === rightAnswer) {
       console.log('Correct!');
       countOfCorrectTries += 1;
     } else {
-      console.log(`'${answer}' is wrong answer :(. Correct answer was '${rightAnswer}'.`);
-      letsTryAgain();
+      console.log(`'${answer}' is wrong answer :(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       exit();
     }
   }
   while (countOfCorrectTries < numberOfRightTries);
 
-  congrats();
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default gameEngine;
