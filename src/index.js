@@ -1,46 +1,30 @@
 import readlineSync from 'readline-sync';
 
-const gameEngine = (gameStart, gameRules) => {
+// eslint-disable-next-line consistent-return
+const gameEngine = (generateNewRound, gameRule) => {
   console.log('Welcome to the Brain Games!');
 
-  let name;
+  const playerName = readlineSync.question('May I have your name?');
 
-  const askName = () => { name = readlineSync.question('May I have your name?'); };
+  console.log(`Hello, ${playerName}!`);
 
-  const greeting = () => console.log(`Hello, ${name}!`);
+  console.log(gameRule);
 
-  askName();
-
-  greeting();
-
-  console.log(gameRules);
-
-  const exit = () => process.exit(-1);
-
-  let countOfCorrectTries = 0;
-
-  const numberOfRightTries = 3;
-
-  do {
-    const [question, rightAnswer] = gameStart();
+  for (let rightAnswersCount = 0; rightAnswersCount < 3; rightAnswersCount += 1) {
+    const [question, rightAnswer] = generateNewRound();
 
     console.log(`Question: ${question}`);
 
-    const askForAnswer = () => readlineSync.question('Your answer: ');
+    const playerAnswer = readlineSync.question('Your answer: ');
 
-    const answer = askForAnswer();
-
-    if (answer === rightAnswer) {
+    if (playerAnswer === rightAnswer) {
       console.log('Correct!');
-      countOfCorrectTries += 1;
     } else {
-      console.log(`'${answer}' is wrong answer :(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
-      exit();
+      console.log(`'${playerAnswer}' is wrong answer :(. Correct answer was '${rightAnswer}'.\nLet's try again, ${playerName}!`);
+      return null;
     }
   }
-  while (countOfCorrectTries < numberOfRightTries);
-
-  console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${playerName}!`);
 };
 
 export default gameEngine;
