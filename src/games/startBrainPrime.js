@@ -1,6 +1,6 @@
 import gameEngine from '../index.js';
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const randomNumber = () => Math.floor(Math.random() * 3571) + 1;
 
@@ -25,7 +25,7 @@ const gameOptions = () => {
 };
 
 const startGame = () => {
-  gameEngine(gameOptions, gameRules);
+  gameEngine(gameOptions, gameRule);
 };
 
 export default startGame;

@@ -1,6 +1,6 @@
 import gameEngine from '../index.js';
 
-const gameRules = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 
 const randomNumber10 = () => Math.floor(Math.random() * 10) + 1;
 
@@ -50,7 +50,7 @@ const gameOptions = () => {
 };
 
 const startGame = () => {
-  gameEngine(gameOptions, gameRules);
+  gameEngine(gameOptions, gameRule);
 };
 
 export default startGame;

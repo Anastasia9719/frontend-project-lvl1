@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
-import randomNumber from '../randomNumber.js';
+import generateRandomNumber from '../utils.js';
 
-const gameRules = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 
 const arrayRandomOperator = (operators) => {
   const randomOperator = (Math.floor(Math.random() * operators.length));
@@ -10,7 +10,7 @@ const arrayRandomOperator = (operators) => {
 
 const operators = ['+', '*', '-'];
 
-const randomExpression = () => `${randomNumber()} ${arrayRandomOperator(operators)} ${randomNumber()}`;
+const randomExpression = () => `${generateRandomNumber()} ${arrayRandomOperator(operators)} ${generateRandomNumber()}`;
 
 const gameOptions = () => {
   const question = randomExpression();
@@ -20,7 +20,7 @@ const gameOptions = () => {
 };
 
 const startGame = () => {
-  gameEngine(gameOptions, gameRules);
+  gameEngine(gameOptions, gameRule);
 };
 
 export default startGame;

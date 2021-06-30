@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
-import randomNumber from '../randomNumber.js';
+import generateRandomNumber from '../utils.js';
 
-const gameRules = 'Find the greatest common divisor of given numbers.';
+const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const divisors = (number1, number2) => {
   if (number1 === 0) {
@@ -14,15 +14,15 @@ const divisors = (number1, number2) => {
 };
 
 const gameOptions = () => {
-  const number1 = randomNumber();
-  const number2 = randomNumber();
+  const number1 = generateRandomNumber();
+  const number2 = generateRandomNumber();
   const question = `${number1} ${number2}`;
   const rightAnswer = String(divisors(number1, number2));
   return [question, rightAnswer];
 };
 
 const startGame = () => {
-  gameEngine(gameOptions, gameRules);
+  gameEngine(gameOptions, gameRule);
 };
 
 export default startGame;
